@@ -1,17 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const QuoteStyled = styled.blockquote`
-  width:auto;
-  height:auto;
+  width: auto;
+  height: auto;
   position: relative;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -21,7 +20,7 @@ const QuoteStyled = styled.blockquote`
     transform: translateX(-100px);
     background: #f7df94;
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 850px) {
       transform: translateX(-60px);
     }
   }
@@ -33,7 +32,7 @@ const QuoteStyled = styled.blockquote`
     margin: 0;
     padding: 0.5rem;
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 850px) {
       width: 314px;
       font-size: 20px;
     }
@@ -48,10 +47,10 @@ const QuoteStyled = styled.blockquote`
 `;
 
 const Quote = ({ quote }) => {
-  const { quoteText} = quote;
+  const { quoteText } = quote;
   return (
     <QuoteStyled>
-      {quoteText && <p className="text">{quoteText}</p>}
+      <p className="text">{quoteText}</p>
     </QuoteStyled>
   );
 };
