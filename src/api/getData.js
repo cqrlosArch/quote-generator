@@ -2,7 +2,7 @@
 const getData = async () => {
   try {
     const res = await fetch(
-      `https://quote-garden.herokuapp.com/api/v2/quotes/random`
+      `https://quote-garden.herokuapp.com/api/v3/quotes/random`
     );
     const data = await res.json();
     return data;

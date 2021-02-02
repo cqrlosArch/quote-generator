@@ -33,7 +33,7 @@ const ListQuotesAuthor = ({ listQuotes, author }) => {
       <h1 className="author">{author}</h1>
       <section className="list-quotes">
         {listQuotes.map((quote) => {
-          return <Quote quote={quote} />;
+          return <Quote key={quote._id} quote={quote} />;
         })}
       </section>
     </ListQuotesStyled>

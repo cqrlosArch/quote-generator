@@ -31,7 +31,7 @@ function App() {
   const getRandomQuote = () => {
     getData().then((data) => {
       setListQuotes(null);
-      setQuote(data.quote);
+      setQuote(data?.data[0]);
     });
   };
 
@@ -39,7 +39,7 @@ function App() {
     getDataGenres(author).then((data) => {
       setQuote(null);
       setAuthor(author);
-      setListQuotes(data.quotes);
+      setListQuotes(data?.data);
     });
   };
 
